@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Emotavia</title>
+    <link rel="icon" href="/static/elogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <script defer src="/static/js/main.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+        <img src="/static/elogo.png" alt="icon" width="40px" height="25px"> Project Emotavia
+        </div>
+
+        <nav class="nav-left">
+            <a href="/user_home">Home</a>
+            <a href="/user_about">About</a>
+            <a href="/user_contact">Contact</a>
+            <a href="/user_support">Support</a>
+        </nav>
+
+        <nav class="nav-right">
+            <b style="color: darkslateblue" >Welcome, {{username}}!</b>
+            <button class="user-logout" id="user-logout">Log Out</button>
+            <button class="home-joinus-btn" onclick="alert('Volunteer registration coming soon!')">Join Us</button>
+        </nav>
+    </header>
+
+{% block content %}{% endblock %}
+
+<!-- FOOTER -->
+    <footer class = "user-footer">
+        © 2025 Project Emotavia. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

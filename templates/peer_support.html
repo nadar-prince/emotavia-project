@@ -1,0 +1,22 @@
+{% extends "user_base.html" %}
+{% block content %}
+
+<section class="hero-user-ai">
+    <h1>Peer Support</h1>
+</section>
+<section class="peer-support-container">
+    <div class="peer-box">
+        <h3>You’re not alone.</h3>
+        <p>
+            Our peer supporters are here to help you with what you're feeling. <br><br>
+            <b>Gender: <i>{{gender}}</i></b><br>
+            <b>Language: <i>{{language}}</i></b><br>
+            <b>Mood: <i>{{ request.args.get('category') }}</i></b>
+        </p>
+        <button onclick="alert('Peer Support coming soon!')">
+            Connect with peer supporter
+        </button>
+    </div>
+</section>
+
+{% endblock %}

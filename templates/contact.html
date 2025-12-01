@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container contact-container">
+
+    <!-- CONTACT FORM SECTION -->
+    <div class="contact-form">
+        <h2>Send Us a Message</h2>
+
+        <form id="contact-form" action="https://formspree.io/f/mrbvppyg" method="POST">
+            <!-- Name Field -->
+            <label>Name:</label>
+            <label>
+                <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            </label>
+            <div class="error" id="name-error"></div> <!-- Error for name -->
+
+            <!-- Email Field -->
+            <label>Email:</label>
+            <label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+            </label>
+            <div class="error" id="email-error"></div> <!-- Error for email -->
+
+            <!-- Message Field -->
+            <label>Message:</label>
+            <label>
+                <textarea name="message" rows="6" placeholder="Write your message here..." required></textarea>
+            </label>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

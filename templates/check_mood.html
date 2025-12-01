@@ -1,0 +1,122 @@
+{% extends "user_base.html" %}
+{% block content %}
+
+    <section class="hero-user-ai">
+        <h1>Mood Detection</h1>
+    </section>
+
+    <div id="mood-choice-buttons">
+    <section class="mood-choice-container">
+    <div class="mood-box">
+        <h2>How are you feeling right now?</h2><br>
+        <button class="mood-main-btn" id="btn-know">I Know</button>
+        <button class="mood-main-btn" id="btn-dont-know">I Don't Know</button>
+    </div>
+</section>
+    </div>
+
+    <!-- GRID (HIDDEN INITIALLY) -->
+    <div id="mood-grid" class="mood-grid hidden">
+
+        <!-- Sadness -->
+        <div class="mood-group">
+            <h3>Sadness & Pain</h3>
+            <div class="mood-items">
+                <button onclick="selectMood('Sadness & Pain')">Sad</button>
+                <button onclick="selectMood('Sadness & Pain')">Low</button>
+                <button onclick="selectMood('Sadness & Pain')">Grief</button>
+                <button onclick="selectMood('Sadness & Pain')">Hurt</button>
+                <button onclick="selectMood('Sadness & Pain')">Lonely</button>
+                <button onclick="selectMood('Sadness & Pain')">Depressed</button>
+                <button onclick="selectMood('Sadness & Pain')">Empty</button>
+                <button onclick="selectMood('Sadness & Pain')">Overwhelmed</button>
+            </div>
+        </div>
+
+        <!-- Anger -->
+        <div class="mood-group">
+            <h3>Anger & Irritation</h3>
+            <div class="mood-items">
+                <button onclick="selectMood('Anger & Irritation')">Angry</button>
+                <button onclick="selectMood('Anger & Irritation')">Irritated</button>
+                <button onclick="selectMood('Anger & Irritation')">Frustrated</button>
+                <button onclick="selectMood('Anger & Irritation')">Rage</button>
+            </div>
+        </div>
+
+        <!-- Anxiety -->
+        <div class="mood-group">
+            <h3>Anxiety & Stress</h3>
+            <div class="mood-items">
+                <button onclick="selectMood('Anxiety & Stress')">Anxious</button>
+                <button onclick="selectMood('Anxiety & Stress')">Worried</button>
+                <button onclick="selectMood('Anxiety & Stress')">Panic</button>
+                <button onclick="selectMood('Anxiety & Stress')">Fearful</button>
+                <button onclick="selectMood('Anxiety & Stress')">Stressed</button>
+            </div>
+        </div>
+
+        <!-- Self-worth -->
+        <div class="mood-group">
+            <h3>Self-worth & Relationship pain</h3>
+            <div class="mood-items">
+                <button onclick="selectMood('Self-worth & Relationship pain')">Heartbroken</button>
+                <button onclick="selectMood('Self-worth & Relationship pain')">Rejected</button>
+                <button onclick="selectMood('Self-worth & Relationship pain')">Insecure</button>
+                <button onclick="selectMood('Self-worth & Relationship pain')">Unseen</button>
+                <button onclick="selectMood('Self-worth & Relationship pain')">Not enough</button>
+            </div>
+        </div>
+
+        <!-- Mental Overload -->
+        <div class="mood-group">
+            <h3>Mental Overload</h3>
+            <div class="mood-items">
+                <button onclick="selectMood('Mental Overload')">Overthinking</button>
+                <button onclick="selectMood('Mental Overload')">Confused</button>
+                <button onclick="selectMood('Mental Overload')">Lost</button>
+                <button onclick="selectMood('Mental Overload')">Drained</button>
+            </div>
+        </div>
+
+        <!-- Burnout -->
+        <div class="mood-group">
+            <h3>Burnout</h3>
+            <div class="mood-items">
+                <button onclick="selectMood('Burnout')">Tired</button>
+                <button onclick="selectMood('Burnout')">Exhausted</button>
+                <button onclick="selectMood('Burnout')">Burnout</button>
+                <button onclick="selectMood('Burnout')">Too much pressure</button>
+            </div>
+        </div>
+
+        <!-- Crisis -->
+        <div class="mood-group">
+            <h3>Crisis Signals</h3>
+            <div class="mood-items">
+                <button onclick="selectMood('Crisis Signals')">I feel like giving up</button>
+                <button onclick="selectMood('Crisis Signals')">I feel unsafe</button>
+                <button onclick="selectMood('Crisis Signals')">Dark thoughts</button>
+            </div>
+        </div>
+
+    </div>
+
+<!-- script -->
+<script>
+document.getElementById("btn-know").onclick = function() {
+    document.getElementById("mood-choice-buttons").style.display = "none";
+    document.getElementById("mood-grid").classList.remove("hidden");
+};
+
+document.getElementById("btn-dont-know").onclick = function() {
+    window.location.href = "/user_ai";
+};
+
+function selectMood(mood) {
+    window.location.href = "/peer_support?category=" + encodeURIComponent(mood);
+}
+</script>
+
+
+{% endblock %}

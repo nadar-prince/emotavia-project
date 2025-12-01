@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <img src="/static/elogo.png" alt="icon" width="210px" height="130px" >
+        <h1>Project Emotavia </h1>
+        <h4>Your safe emotional space. Anytime. Anywhere.</h4>
+        <p>Check your mood, understand your feelings, talk to someone who gets you.</p>
+        <button class="home-mood-btn" id="home-mood-btn">Check My Mood</button>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-us">
+        <h2>Why Choose Us</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">🧠</div>
+                <h3>Emotional Check-In</h3>
+                <ul>
+                    <li>Quick mood buttons</li>
+                    <li>Email reminders</li>
+                    <li>AI emotion detection</li>
+                    <li>Instant tools</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="icon">🤝</div>
+                <h3>Peer Support</h3>
+                <ul>
+                    <li>Language-matched</li>
+                    <li>Gender-matched</li>
+                    <li>Emotion specialization</li>
+                    <li>Anonymous environment</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+<!-- EMOTAVIA CIRCLES SECTION -->
+<section class="circles-section">
+    <h2>Emotavia Circles</h2>
+    <p class="circles-description">
+        Small emotional learning groups built for schools, colleges, families and communities.<br>
+        These circles help people feel supported, connected and emotionally understood.
+    </p>
+
+    <div class="circles-container">
+
+        <!-- Parenting Circles -->
+        <div class="circle-card">
+            <div class="icon">👨‍👩‍</div>
+            <h3>Parenting Circles</h3>
+            <p>Supportive spaces for parents to reflect, learn emotional skills, and build healthy family communication.</p>
+        </div>
+
+        <!-- Teacher Circles -->
+        <div class="circle-card">
+            <div class="icon">📚‍</div>
+            <h3>Teacher Emotional Circles + Training</h3>
+            <p>Emotional wellbeing and peer-support networks designed exclusively for teachers and educators.</p>
+        </div>
+
+        <!-- Youth Circles -->
+        <div class="circle-card">
+            <div class="icon">🧒‍</div>
+            <h3>Youth Emotional Circles</h3>
+            <p>Safe youth groups where students and young adults can talk, share, and learn emotional resilience.</p>
+        </div>
+
+        <!-- Weekly Zoom Circles -->
+        <div class="circle-card">
+            <div class="icon">💻‍</div>
+            <h3>Weekly Zoom Circles</h3>
+            <p>Virtual support circles open to anyone seeking connection and emotional clarity.</p>
+        </div>
+
+        <!-- Rural Circles -->
+        <div class="circle-card">
+            <div class="icon">🌾‍</div>
+            <h3>Rural Circles</h3>
+            <p>Community-led wellbeing circles supporting rural areas through accessible emotional learning.</p>
+        </div>
+
+    </div>
+</section>
+
+
+{% endblock %}
