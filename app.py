@@ -17,7 +17,7 @@ client = OpenAI(api_key=openai_api_key)
 DB_CONFIG = {
     "host": os.getenv("DB_HOST","localhost"),
     "user": os.getenv("DB_USER","root"),
-    "password": os.getenv("DB_PASS","Prince@1212"),
+    "password": os.getenv("DB_PASS",""),
     "database": os.getenv("DB_NAME","emotavia"),
     "autocommit": True
 }
@@ -51,8 +51,8 @@ def send_email(to_email, subject, body):
     try:
         SMTP_HOST = os.getenv("SMTP_HOST","smtp.gmail.com")
         SMTP_PORT = int(os.getenv("SMTP_PORT", "587"))
-        SMTP_USER = os.getenv("SMTP_USER","emotavia.official@gmail.com")
-        SMTP_PASS = os.getenv("SMTP_PASS","xvtc qswh natw mgxh")
+        SMTP_USER = os.getenv("SMTP_USER","")
+        SMTP_PASS = os.getenv("SMTP_PASS","")
         msg = EmailMessage()
         msg["Subject"] = subject
         msg["From"] = SMTP_USER
@@ -270,3 +270,4 @@ def logout():
 # --- Running the App ---
 if __name__ == "__main__":
     app.run(debug=True)
+
