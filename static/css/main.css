@@ -1,0 +1,1045 @@
+/* ----------------------------------------------------
+   GLOBAL
+-----------------------------------------------------*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Cambria", sans-serif;
+    background: #fafafa;
+    color: #222;
+}
+
+/* ----------------------------------------------------
+   HEADER (Shared Across All Pages)
+-----------------------------------------------------*/
+header {
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* Scrollbar Remover
+ ::-webkit-scrollbar{
+            width:0;
+            }
+
+*/
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    padding: 5px;
+}
+
+.nav-left{
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.nav-right{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+/* NAVIGATION LINK HOVER */
+nav a:hover {
+    color: #cbb799;
+    transition: 0.3s ease;
+}
+
+
+nav a.active {
+    color: #cbb799;
+}
+
+nav button {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+
+/* NAVIGATION BUTTON POP-OUT HOVER */
+.home-login-signup-btn:hover,
+.user-logout:hover,
+.home-joinus-btn:hover,
+.home-mood-btn:hover,
+.user-mood-btn:hover,
+.support-contactus:hover,
+.user-support-contactus:hover {
+    transform: scale(1.07);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: 0.25s ease;
+}
+
+.home-login-signup-btn:hover,
+.user-logout:hover{
+    background: #cbb799;
+}
+
+.home-mood-btn,
+.user-mood-btn {
+    margin-top: 30px;
+    padding: 14px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Cambria", sans-serif;
+    background: #6f4d38;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.home-login-signup-btn,
+.user-logout {
+    padding: 8px 14px;
+    background: #a07856;
+    color: #fff !important;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.home-joinus-btn {
+    padding: 8px 14px;
+    background: #a07856;
+    color: #fff !important;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.home-joinus-btn:hover{
+    background: #cbb799;
+}
+
+/* ----------------------------------------------------
+   HOME PAGE — HERO SECTION
+-----------------------------------------------------*/
+.hero {
+    text-align: center;
+    padding: 40px 50px;
+    background: #F5F5DC;
+}
+
+.hero-user-ai {
+    text-align: center;
+    padding: 10px 50px;
+    background: #F5F5DC;
+}
+
+.hero h1 {
+    font-size: 40px;
+    max-width: 1500px;
+    margin: 0 auto;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.hero h4 {
+    font-size: 35px;
+    max-width: 1500px;
+    margin: 0 auto;
+    line-height: 1.3;
+    font-weight: normal;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #555;
+}
+
+.home-mood-btn:hover,
+.user-mood-btn:hover {
+    background: #a07856;
+}
+
+/* ----------------------------------------------------
+   HOME PAGE — WHY CHOOSE US SECTION
+-----------------------------------------------------*/
+.why-us {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.why-us h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+/* CARD POP-OUT HOVER EFFECT */
+.card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+.card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+.card ul li {
+    margin: 8px 0;
+}
+
+.user-hero {
+    text-align: center;
+    padding: 164px 174px;
+    background: #F5F5DC;
+}
+
+.user-hero h1 {
+    font-size: 40px;
+    max-width: 1500px;
+    margin: 0 auto;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.user-hero h4 {
+    font-size: 35px;
+    max-width: 1500px;
+    margin: 0 auto;
+    line-height: 1.3;
+    font-weight: normal;
+}
+
+.user-hero p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #555;
+}
+
+/* ----------------------------------------------------
+   EMOTAVIA CIRCLES — HOME PAGE SECTION
+-----------------------------------------------------*/
+.circles-section {
+    padding: 0 50px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.circles-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.circles-description {
+    font-size: 17px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+.circles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.circle-card {
+    width: 280px;
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    text-align: left;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.circle-card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+/* Hover effect like support page */
+.circle-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.circle-card h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #333;
+}
+
+.circle-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+/* ----------------------------------------------------
+   ABOUT PAGE — SECTIONS
+-----------------------------------------------------*/
+
+/* REMOVE FADE / SCROLL ANIMATION */
+.section {
+    padding: 15px 60px;
+    max-width: 1000px;
+    margin: auto;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: black;
+}
+
+.section-text {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 20px;
+    color: #555;
+}
+
+/* Mission list */
+.list li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #555;
+}
+
+/* Purpose list */
+.purpose-list li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* ----------------------------------------------------
+   FOOTER
+-----------------------------------------------------*/
+footer {
+    margin-top: 74px;
+    padding: 18px;
+    background: #222;
+    color: #fff;
+    text-align: center;
+}
+
+.user-footer {
+    margin-top: 0;
+    padding: 18px;
+    background: #222;
+    color: #fff;
+    text-align: center;
+}
+
+/* ----------------------------------------------------
+   CONTACT PAGE
+-----------------------------------------------------*/
+
+.contact-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-family: "Cambria", sans-serif;
+}
+
+.user-contact-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 62px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-family: "Cambria", sans-serif;
+}
+
+.contact-form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 300px;
+    font-family: "Cambria", sans-serif;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-family: "Cambria", sans-serif;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #333;
+    font-family: "Cambria", sans-serif;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 95%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-family: "Cambria", sans-serif;
+}
+
+.contact-form button {
+    background: #6f4d38;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+    font-family: "Cambria", sans-serif;
+}
+
+.contact-form button:hover {
+    background: #a07856;
+    transform: scale(1.07);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: 0.25s ease;
+}
+
+
+/* ----------------------------------------------------
+   SUPPORT PAGE
+-----------------------------------------------------*/
+
+.support-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+.support-section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 35px;
+}
+
+.support-section h2 {
+    color: black;
+    margin-bottom: 15px;
+}
+
+.support-section p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.support-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.support-card {
+    flex: 1;
+    min-width: 260px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.support-card:hover {
+    transform: translateY(-5px);
+}
+
+.support-card h3 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.support-card p {
+    color: #555;
+    font-size: 15px;
+}
+
+/* Support page buttons */
+.support-card button {
+    padding: 12px 18px;
+    background: #6f4d38;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.support-card button:hover {
+    background: #a07856;
+}
+
+.support-section button {
+    padding: 12px 18px;
+    background: #6f4d38;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.support-section button:hover {
+    background: #a07856;
+}
+
+/* ----------------------------------------------------
+   SIGNUP PAGE
+-----------------------------------------------------*/
+
+.signup-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 64px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-family: "Cambria", sans-serif;
+}
+
+.signup-form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 300px;
+    font-family: "Cambria", sans-serif;
+}
+
+.signup-form h2 {
+    margin-bottom: 40px;
+    color: black;
+    text-align: center;
+    font-family: "Cambria", sans-serif;
+}
+
+.signup-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: black;
+    font-family: "Cambria", sans-serif;
+}
+
+.signup-form input {
+    width: 95%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-family: "Cambria", sans-serif;
+}
+
+.signup-form select {
+    width: 99.6%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-family: "Cambria", sans-serif;
+}
+
+.signup-form button {
+    background: #6f4d38;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+    font-family: "Cambria", sans-serif;
+}
+
+.signup-form button:hover {
+    background: #a07856;
+    transform: scale(1.07);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: 0.25s ease;
+}
+
+.signup-form .password-container {
+    position: relative;
+}
+
+.signup-form select {
+    background-color: white;
+}
+
+/* Password box wrapper */
+.password-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Input box styling */
+.password-container input {
+    width: 100%;
+    padding: 12px 45px 12px 12px; /* space for eye icon */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    font-family: "Cambria", sans-serif;
+    box-sizing: border-box;
+}
+
+/* Eye icon image */
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 35%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.toggle-password:hover {
+    opacity: 1;
+}
+
+/* Password box wrapper */
+.password-container-login {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.signup-form .error,
+.contact-form .error{
+    color: red;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.signup-form .info,
+.contact-form .info{
+    font-size: 14px;
+    color: #555;
+    margin-top: -12px;
+    margin-bottom: 15px;
+}
+
+/* ----------------------------------------------------
+   LOGIN PAGE
+-----------------------------------------------------*/
+
+.login-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 64px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-family: "Cambria", sans-serif;
+}
+
+.login-form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 300px;
+    font-family: "Cambria", sans-serif;
+}
+
+.login-form h2 {
+    margin-bottom: 40px;
+    color: black;
+    text-align: center;
+    font-family: "Cambria", sans-serif;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: black;
+    font-family: "Cambria", sans-serif;
+}
+
+.login-form input {
+    width: 95%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-family: "Cambria", sans-serif;
+}
+
+.login-form button {
+    background: #6f4d38;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+    font-family: "Cambria", sans-serif;
+}
+
+.login-form button:hover {
+    background: #a07856;
+    transform: scale(1.07);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: 0.25s ease;
+}
+
+.login-form .password-container {
+    position: relative;
+}
+
+.login-form .signup-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login-form .signup-link a {
+    color: #6f4d38;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-form .signup-link a:hover {
+    text-decoration: underline;
+}
+
+.chat-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-container button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #6f4d38;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.chat-container button:hover {
+    background-color: #a07856;
+}
+
+/* Styling for All Chat Boxes (Including Chat 1, 2, and 3) */
+.chat-box {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 4px;
+}
+
+
+/* User and AI Message Styles */
+.user-message, .ai-message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.user-message {
+    background-color: #d0f0c0;
+    text-align: left;
+}
+
+.ai-message {
+    background-color: #e1e1e1;
+    text-align: left;
+}
+
+/* Input Fields and Button Styling */
+#user-input, #user-input-2, #user-input-3 {
+    width: 88.8%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.mood-main-btn {
+    padding: 14px 30px;
+    background: #6f4d38;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.mood-main-btn:hover {
+    background: #a07856;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+.mood-grid {
+    width: 85%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.mood-group {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.mood-group h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.mood-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.mood-items button {
+    padding: 10px 18px;
+    background: #e1d7c6;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.mood-items button:hover {
+    background: #cbb799;
+}
+
+.selected-mood {
+    font-size: 32px;
+    color: #6f4d38;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+.mood-choice-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding-bottom: 321px;
+}
+
+.mood-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.mood-box button {
+    padding: 12px 20px;
+    background: #6f4d38;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.mood-box button:hover {
+    background: #a07856;
+    transform: scale(1.05);
+}
+
+.peer-support-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding-bottom: 229px;
+}
+
+.peer-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.peer-box h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.peer-box p {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+.peer-box button {
+    padding: 12px 20px;
+    background: #6f4d38;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.peer-box button:hover {
+    background: #a07856;
+    transform: scale(1.05);
+}
+
+.final-mood-main-btn {
+    padding: 14px 30px;
+    background: #6f4d38;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    margin: 15px auto;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.final-mood-main-btn:hover {
+    background: #a07856;
+    transform: scale(1.05);
+}
+
+
+.flash-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.flash-message {
+    padding: 12px 20px;
+    margin: 10px auto;
+    width: 60%;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Success = green */
+.flash-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Error = red */
+.flash-message.danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Info = blue */
+.flash-message.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
